@@ -1,5 +1,7 @@
 # CSS-Only-Burger-Navigation-Menu
 
+__Far from complete, please avoid using for the time beeing!__
+
 ## Example
 
 ```html
