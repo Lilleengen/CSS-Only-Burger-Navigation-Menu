@@ -1,0 +1,97 @@
+body {
+  overflow-x: hidden;
+}
+
+.nav-checkbox {
+  display: none;
+}
+
+.nav {
+  bottom: 0;
+  height: 100%;
+  left: -300px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: left .2s linear;
+  width: 300px;
+}
+
+.nav-label {
+  cursor: pointer;
+  height: 39px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: left .2s linear, background-color .2s linear, width .2s step-end, height .2s step-end;
+  width: 55px;
+  z-index: 2;
+}
+
+.nav-checkbox:checked ~ .nav-label {
+  background-color: rgba(51, 51, 51, .5);
+  height: 100%;
+  left: 300px;
+  width: 100%;
+  transition: left .2s linear, background-color .2s linear, width .2s step-start, height .2s step-start;
+}
+
+.nav-checkbox:checked ~ .nav {
+  left: 0;
+}
+
+.nav-checkbox:checked ~ .content {
+  left: 300px;
+}
+
+.content {
+  left: 0;
+  position: relative;
+  transition: left .2s linear;
+}
+
+.burgericon,
+.burgericon::before,
+.burgericon::after {
+  background-color: #000;
+  border-radius: 4px;
+  height: 4px;
+  position: absolute;
+  transition: transform .2s ease;
+  width: 40px;
+}
+
+.burgericon {
+  left: 15px;
+  top: 15px;
+}
+
+.burgericon::before,
+.burgericon::after {
+  content: "";
+  display: block;
+}
+
+.burgericon::before {
+  top: 10px;
+  transition-property: transform, opacity;
+  transition-timing-function: ease;
+}
+
+.burgericon::after {
+  bottom: -10px;
+  top: 20px;
+}
+
+.nav-checkbox:checked ~ .nav-label .burgericon {
+  transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+
+.nav-checkbox:checked ~ .nav-label .burgericon::before {
+  opacity: 0;
+  transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+}
+
+.nav-checkbox:checked ~ .nav-label .burgericon::after {
+  transform: translate3d(0, -20px, 0) rotate(-90deg);
+}
