@@ -1,6 +1,5 @@
 # CSS-Only-Burger-Navigation-Menu
 
-<<<<<<< HEAD
 A small CSS "library" providing a simple off site burger navigation menu in pure CSS. This is highly inspired by [Pure CSS Off-screen Navigation Menu](https://www.sitepoint.com/pure-css-off-screen-navigation-menu/) by Austin Wulf @ sitepoint.
 
 Using this as is might not be suitable in a lot of projects, but it should provide a great starting point.
